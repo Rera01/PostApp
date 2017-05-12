@@ -1,0 +1,18 @@
+<div class="row">
+	<div ng-show="pag.length > 0" class="animated col-md-10 separate"> 
+		<div ng-repeat="post in pag.slice(((currentPage-1)*numPerPage), ((currentPage)*numPerPage))">
+			<div class="panel panel-info">
+			  <div class="panel-heading">
+				  <strong><a href="#!/post/{{post.id}}">{{post.title}}</a></strong>
+				  <a href="#!/post/edit/{{post.id}}"><i class="glyphicon glyphicon-pencil pull-right" uib-tooltip="Edit"></i></a>
+				  <a ng-click="deletePost(post)"><i class="glyphicon glyphicon-remove pull-right" uib-tooltip="Delete"></i></a>
+			  </div>
+			  <div class="panel-body">{{post.body}}</div>
+			  <div class="panel-footer"><a href="#!/post/{{post.id}}">Read more...</a></div>
+			</div>
+		</div>
+		<div uib-pagination total-items="pag.length" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages"></div>
+	</div>
+</div>
+
+

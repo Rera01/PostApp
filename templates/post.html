@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-md-10">
+		<div class="panel panel-info">
+		    <div class="panel-heading">
+			    <strong>{{post.title}}</strong>
+			    <!-- <a href="#" tooltip-placement="top" uib-tooltip="Edit"><i class="glyphicon glyphicon-pencil pull-right"></i></a>
+			    <a href="#" tooltip-placement="top" uib-tooltip="Delete"><i class="glyphicon glyphicon-remove pull-right"></i></a> -->
+			</div>
+			<div class="panel-body">{{post.body}}</div>
+				<div class="panel-footer">
+				<a href="#!/post/edit/{{post.id}}">Edit</a>
+				<a ng-click="deletePost(post.id)">Delete</a>
+			</div>
+		</div>
+	</div>
+</div>
